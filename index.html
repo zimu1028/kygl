@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>科研计算器管理系统</title>
     <style>
         body {
@@ -11,11 +11,7 @@
             padding: 0;
             background-color: #f0f2f5;
         }
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#2c3e50">
 
-        /* 登录窗口样式 */
         .login-container {
             width: 350px;
             margin: 100px auto;
@@ -44,7 +40,6 @@
             cursor: pointer;
         }
 
-        /* 主界面样式 */
         .main-container {
             display: none;
         }
@@ -90,8 +85,58 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-           /* 新增移动端样式 */
-           @media (max-width: 768px) {
+        /* 科学计算器样式 */
+        .science-calculator {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .calc-display {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            text-align: right;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            background: #f8f9fa;
+        }
+
+        .calc-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        .calc-btn {
+            padding: 15px;
+            font-size: 1.1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .calc-btn:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        .operator {
+            background: #f8f9fa;
+        }
+
+        .equals {
+            background: #28a745;
+            color: white;
+        }
+
+        .special-fn {
+            background: #ffc107;
+        }
+
+        @media (max-width: 768px) {
             .login-container {
                 width: 90%;
                 margin: 50px auto;
@@ -146,18 +191,20 @@
             .calculator-section {
                 padding: 15px;
             }
+
+            .calc-btn {
+                padding: 12px;
+                font-size: 1em;
+            }
         }
 
-        /* 汉堡菜单按钮（默认隐藏） */
-       # .hamburger {
-            #display: ;
-      #  }
+        .hamburger {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    </style>
-</head>
-<body>
+    
     <!-- 登录界面 -->
     <div class="login-container" id="loginContainer">
         <h2>科研计算器登录</h2>
